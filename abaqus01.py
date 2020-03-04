@@ -7,11 +7,12 @@ k=6630; #difference between your topmost and bottomost element number
 def generate():
         seq=(str(theta),".");
         mod_theta="".join(seq);
-        print("*Elset, elset=CompositeLayup-",c,"-1, generate",file=myfile);
-        print("   ",x," ,",x+k,", 170",file=myfile);
-        print("** Section: CompositeLayup-",c,"-1",file=myfile);
-        print("*Shell Section,elset=CompositeLayup-",c,"-1, composite, layup=CompositeLayup-",c,file=myfile);
-        print("",t,", ",i,", cylinder, ",mod_theta,", ply-1",file=myfile);
+        print("** Region: (CompositeLayup-",c,"-1: Generated From Layup)",sep="",file=myfile)
+        print("*Elset, elset=CompositeLayup-",c,"-1, generate",sep="",file=myfile);
+        print("   ",x,",  ",x+k,",   170",sep="",file=myfile);
+        print("** Section: CompositeLayup-",c,"-1",sep="",file=myfile);
+        print("*Shell Section,elset=CompositeLayup-",c,"-1, composite, layup=CompositeLayup-",c,sep="",file=myfile);
+        print("",t,", ",i,", cylinder, ",mod_theta,", Ply-1",sep="",file=myfile);
 while x<171:
         myfile=open('composite.txt','a');
         if x==170:
