@@ -3,11 +3,12 @@ theta=0; #material orientation angle
 t=0.000104; #thickness
 i=5; #number of integration points
 c=1; #compositelayup number
+k=6630; #difference between your topmost and bottomost element number
 def generate():
         seq=(str(theta),".");
         mod_theta="".join(seq);
         print("*Elset, elset=CompositeLayup-",c,"-1, generate",file=myfile);
-        print("   ",x," ,",x+6630,", 170",file=myfile);
+        print("   ",x," ,",x+k,", 170",file=myfile);
         print("** Section: CompositeLayup-",c,"-1",file=myfile);
         print("*Shell Section,elset=CompositeLayup-",c,"-1, composite, layup=CompositeLayup-",c,file=myfile);
         print("",t,", ",i,", cylinder, ",mod_theta,", ply-1",file=myfile);
